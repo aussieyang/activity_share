@@ -12,3 +12,4 @@
 !/log/.keep
 /tmp
 schema.rb
+.byebug_history
