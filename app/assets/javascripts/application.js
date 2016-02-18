@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require app
+//= require jquery.raty
+//= require ratyrate
 
 

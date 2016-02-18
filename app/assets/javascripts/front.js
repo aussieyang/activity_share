@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require app
+//= require jquery.raty
+//= require ratyrate
 
 
