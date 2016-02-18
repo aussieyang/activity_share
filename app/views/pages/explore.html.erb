@@ -1,0 +1,12 @@
+<h1>explore all activities</h1>
+
+<div class="explore-map">
+
+
+</div>
+
+<% @activities.each do |activity| %>
+  <div class="row">
+    <a href="/admin/activities/<%=activity.id%>"><%= activity.title %></a>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+  
+  <form role="form" action="/users" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div id = "create-wrapper">
+    <div class="form-wrapper">
+        <label for="">Username:</label>
+        <input type="text" placeholder="BlackHorse559" name="user[name]">
+
+        <label for="">Email:</label>
+        <input type="text" placeholder="example@freemail.com" name="user[email]">
+
+        <label for="">Password:</label>
+        <input type="password" placeholder="Please don't use abcd1234" name="user[password]">
+
+        <label for="">Upload Avatar:</label>
+            <div>
+              <input type="text" readonly>
+              <span class="input-group-btn">
+                <span class="btn btn-primary btn-file">
+                  Browse&hellip; <input type="file" name="user[avatar]">
+                </span>
+              </span>
+            </div>
+
+        <label for="">Location:</label>
+        <input type="text" placeholder="enter a location" name="user[location]">
+
+        <label for="">Age:</label>
+        <input type="number" name="user[age]" min="10" max="120">
+
+        <label for="">Gender:</label>
+          <div class="gender-pick">
+            <div class="gender-options"><input name="user[gender]" type="radio" value="male" checked>Male</div>
+            <div class="gender-options"><input name="user[gender]" type="radio" value="female">Female</div>
+            <div class="gender-options"><input name="user[gender]" type="radio" value="other">Other</div>
+          </div>
+
+        <button>Create</button>
+      </div>
+    </div>
+  </form>

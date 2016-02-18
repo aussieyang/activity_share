@@ -1,0 +1,24 @@
+<h1>Edit Activity</h1>
+
+<form action="/activities/<%=@activity.id%>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="title">Give the activity a title</label>
+  <input type="text" name="name" value="<%=@activity.title%>"/>
+
+  <label for="description">Description of Activity</label>
+  <textarea name="description"><%=@activity.description%></textarea>
+
+  <label for="location">Location</label>
+  <input type="text" name="location" value="<%=@activity.location%>"/>
+
+  <label for="date">Date of Activity</label>
+  <input type="date" name="date" value=""/>
+
+  <label for="time">time of activity</label>
+  <input type="time" name="time" value=""/>
+
+  <button type="submit" name="button">submit</button>
+</form>

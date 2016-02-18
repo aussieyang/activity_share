@@ -1,0 +1,5 @@
+<h1>booked</h1>
+
+<% @bookings.each do |booking| %>
+  <a href="/admin/activities/<%=booking.activity.id%>"><%= booking.activity.title if booking.activity %></a>
+<% end %>

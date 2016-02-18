@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ActivityShare</title>
+  <%= stylesheet_link_tag    'front', media: 'all', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag 'front' %>
+  <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB12mD0AKu8-GBFWRFN3EQOUWxoUShIs6Q&libraries=places"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+</head>
+<body>
+
+
+  <div class="nav-bar">
+  
+  <% if logged_in?  %>
+    <div class="logged-info">
+      <img src="<%= current_user.avatar %>" alt="">
+      <h3>Hello, <%= current_user.name %> <a href="/logout">[Logout]</a></h3>
+    </div>
+  <% else %>
+    <div class="not-logged">
+      <button>Log In</button>
+      <button>Sign Up</button>
+    </div>
+  <% end %>
+
+    <%= image_tag "Logo.png", :class => "logo grow" %>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Activity">
+      <button>&#128269;</button>
+    </div>
+
+  </div>
+
+  <%= yield %>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<h1>Activities I am Hosting</h1>
+<% @activities.each do |activity| %>
+<div class="hosting-card">
+  <p><a href="/admin/activities/<%=activity.id%>"><%= activity.title %></a></p>
+  <p><%= activity.start.strftime('%b %d %y at %H:%M') %></p>
+
+  </div>
+<% end %>

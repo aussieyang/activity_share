@@ -1,0 +1,28 @@
+<h1>new activity</h1>
+
+<form action="/activities" method="post">
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <label for="title">Activity</label>
+  <input type="text" name="title" />
+
+  <label for="description">Description of Activity</label>
+  <textarea name="description"></textarea>
+
+  <label for="location">Location</label>
+  <input id="place-input" type="text" name="location" />
+
+  <label for="start">Date of Activity</label>
+  <%= datetime_select :activity, :start %>
+
+  <!-- <label for="time">time of activity</label>
+  <input type="time" name="time" /> -->
+
+  <button type="submit" name="button">submit</button>
+</form>
+
+<script>
+    var input = document.getElementById('place-input');
+  var searchBox = new google.maps.places.SearchBox(input);
+</script>

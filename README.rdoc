@@ -1,0 +1,11 @@
+# ActivityShare
+
+Rails Application to find like-minded individuals to do hobbies and activities with.
+
+## Development Notes
+
+ALWAYS MAKE CHANGES ON A BRANCH. NEVER MERGE TOO MASTER WITHOUT GETTING CODE REVIEWED.
+
+Development address: Localhost:3000
+
+Run `bundle install` after each merge from master.

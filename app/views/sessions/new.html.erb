@@ -1,0 +1,25 @@
+
+    
+
+<div id="login-wrapper">
+    <%= image_tag "Logo.png", :class => "logo grow" %>
+    <h1 class="grow">Activity Share</h1>
+  <form role="form" action="/sessions" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" placeholder="UserName or Email" name="name">
+    <input type="text" placeholder="Password" name="password">
+    <button>Log In</button>
+    <button>
+      <a id="fb" href="/auth/facebook">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login
+      </a>
+    </button>
+    <p><a href="/users/new"> - -  First time? Click here to sign up.  - - </a></p>
+  </form>
+
+
+  </div>
+
+
+

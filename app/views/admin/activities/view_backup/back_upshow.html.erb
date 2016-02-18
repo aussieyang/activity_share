@@ -1,0 +1,25 @@
+<p>Name: <%= @activity.title %></p>
+<p>Description: <%= @activity.description %></p>
+<p>Start Time:<%= @activity.start %></p>
+<p>Location: <%= @activity.location %></p>
+
+<form action="/bookings" method="post">
+  <input type="hidden" name="activity_id" value="<%= @activity.id %>">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button>Register Interest</button>
+</form>
+
+<% @bookings.each do |booking| %>
+  <p><%= booking.user_id %></p>
+<% end %>
+
+
+<% if @activity.user_id = session[:user_id] %>
+  <%= link_to 'edit activity', edit_activity_path	 %>
+
+  <form action="/activities/<%=@activity.id%>" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="hidden" name="_method" value="delete" />
+    <button>Delete</button>
+  </form>
+<% end %>

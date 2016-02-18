@@ -1,0 +1,49 @@
+<div class="show-activity">
+
+  <div class="wider activity">
+    <h2 class="title"><%= @activity.title %></h2>
+
+    <div class="user-info">
+      <img class="user-pic" src="http://placehold.it/100x100" alt="">
+      <p class="user-name"><%= @activity.user.name %></p>
+      <form action="/admin/bookings" method="post">
+        <input type="hidden" name="activity_id" value="<%= @activity.id %>">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <button class="join">Join Activity</button>
+      </form>
+    </div>
+
+    <div class="activity-info">
+      <div class="location-map">
+        <img src="http://placehold.it/400x200" alt="">
+      </div>
+
+      <div class="activity-info-content">
+        <p class="location"><%= @activity.location %></p>
+        <p class="date"><%= @activity.start.strftime('%b %d %y at %H:%M') %></p>
+        <p class="description"><%= @activity.description %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="users">
+    <h3 class="attending">Attending:</h3>
+
+    <% @bookings.each do |booking| %>
+      <div class="smaller user-info">
+        <img class="smaller-user-pic" src="http://placehold.it/100x100" alt="">
+        <p class="user-name"><%= booking.user.name %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @activity.user_id = current_user %>
+    <%= link_to 'Edit Activity', edit_admin_activity_path	 %>
+    <form action="/admin/activities/<%=@activity.id%>" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="hidden" name="_method" value="delete" />
+      <button>Cancel Activity</button>
+    </form>
+  <% end %>
+
+</div>

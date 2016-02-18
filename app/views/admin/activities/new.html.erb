@@ -1,0 +1,32 @@
+<div id="create-wrapper">
+
+  <form action="/admin/activities" method="post" class="form-wrapper">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <label for="title">Activity:</label>
+    <input type="text" name="title" placeholder="Give a brief description of the activity">
+
+    <div class="datetime">
+      <div>
+        <label for="">Date:</label>
+        <input type="date" placeholder="" name="date">
+      </div>
+      @
+      <div>
+        <label for="">Time:</label>
+        <input type="time" placeholder="" name="time">
+      </div>
+    </div>
+
+    <label for="location">Location:</label>
+    <input id="place-input" type="text" name="location" placeholder="Where is the activity?">
+
+    <label for="description">Details:</label>
+    <textarea name="description" class="form-control" rows="10"></textarea>
+
+    <button>Create Activity</button>
+  </form>
+
+</div>
+
+

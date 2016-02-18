@@ -1,0 +1,31 @@
+<div id="create-wrapper">
+
+  <form action="/admin/activities/<%=@activity.id%>" method="post" class="form-wrapper">
+    <input type="hidden" name="_method" value="patch" />
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <label for="title">Activity:</label>
+    <input type="text" name="title" value="<%=@activity.title%>">
+
+    <div class="datetime">
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" placeholder="" name="date" value="">
+      </div>
+      @
+      <div>
+        <label for="time">Time:</label>
+        <input type="time" placeholder="" name="time" value="">
+      </div>
+    </div>
+
+    <label for="location">Location:</label>
+    <input id="place-input" type="text" name="location" value="<%=@activity.location%>">
+
+    <label for="description">Details:</label>
+    <textarea name="description" class="form-control" rows="10" value="<%=@activity.description%>"></textarea>
+
+    <button>Update Activity</button>
+  </form>
+
+</div>

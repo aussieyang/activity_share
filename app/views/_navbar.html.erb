@@ -1,0 +1,17 @@
+<div class="nav-bar">
+  <div class="logged-info">
+    <% if logged_in? %>
+    <% user = current_user %>
+      <a href="/admin/dashboard"><img src="http://placehold.it/100x100" alt=""></a>
+      <h3><%= user.name %></h3>
+    <% else %>
+      <h3><a href="/login">Login</a></h3>
+      <h3><a href="/admin/users/new">Signup</a></h3>
+    <% end %>
+  </div>
+  <a href="/"><img src="http://placehold.it/100x100" alt=""></a>
+  <div class="search-bar">
+    <input type="text" placeholder="Activity">
+    <button>&#128269;</button>
+  </div>
+</div>
