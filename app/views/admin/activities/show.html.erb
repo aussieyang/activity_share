@@ -23,6 +23,7 @@
         <p class="date"><%= @activity.start.strftime('%b %d %y at %H:%M') %></p>
         <p class="description"><%= @activity.description %></p>
       </div>
+      host_rating: <%= rating_for @activity, 'host' %>
     </div>
   </div>
 
