@@ -10,12 +10,10 @@
     <div class="datetime">
       <div>
         <label for="date">Date:</label>
-        <input type="date" placeholder="" name="date" value="">
-      </div>
-      @
-      <div>
+        <input type="date" placeholder="" name="date" value="<%=@activity.start.strftime('%Y-%m-%d')%>">
+      </div>@<div>
         <label for="time">Time:</label>
-        <input type="time" placeholder="" name="time" value="">
+        <input type="time" placeholder="" name="time" value="<%=@activity.start.strftime('%H:%M')%>">
       </div>
     </div>
 
