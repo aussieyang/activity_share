@@ -28,8 +28,12 @@
     </div>
       <a href="/"><img src="http://placehold.it/100x100" alt=""></a>
     <div class="search-bar">
-      <input type="text" placeholder="Activity">
-      <button>&#128269;</button>
+      <form action="/activities">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <input type="text" placeholder="Search" name="location" id="place-input">
+        <button>&#128269;</button>
+      </form>
+
     </div>
   </div>
 
@@ -50,6 +54,11 @@
         <li><%= link_to 'Activites I am interested in', admin_booked_path(current_user) %></li>
       </ul>
     </nav>
+    <form action="/logout" class="dash-logout">
+      <input type="hidden" name="_method" value="delete" />
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <button>Log Out</button>
+    </form>
   </div>
   <div class="right-content">
     <%= yield %>
@@ -59,6 +68,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+  var input = $('#place-input');
+  var searchBox = new google.maps.places.SearchBox(input[0]);
+
+  });
+</script>
 
 </body>
 </html>
