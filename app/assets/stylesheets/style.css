@@ -1,152 +1,64 @@
+/* Grow on hover */
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.35); }
+/* ========================== */
 
-/*Form button related CSS*/
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-}
-/*###################################################*/
-
-body{
-  background-color: #1cbb9b;
+.split {
+  display: flex;
+  flex-direction: row;
+  margin-top: 85px;
 }
 
-.login-box{
-  position:relative;
-  margin: 10px auto;
-  width: 500px;
-  height: 380px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
-  -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
-  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
-}
-.lb-header{
-  position:relative;
-  color: #00415d;
-  margin: 5px 5px 10px 5px;
-  padding-bottom:10px;
-  border-bottom: 1px solid #eee;
-  text-align:center;
-  height:28px;
-}
-.lb-header a{
-  margin: 0 25px;
-  padding: 0 20px;
-  text-decoration: none;
-  color: #666;
-  font-weight: bold;
-  font-size: 15px;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-.lb-header .active{
-  color: #029f5b;
-  font-size: 18px;
-}
-.social-login{
-  position:relative;
-  float: left;
-  width: 100%;
-  height:auto;
-  padding: 10px 0 15px 0;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-.social-login a{
-  position:relative;
-  float: left;
-  width:60%
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid rgba(0,0,0,0.05);
-  padding: 12px;
-  border-radius: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  margin: 0 3%;
-  text-align:center;
-  background-color: #49639F;
-}
-.social-login a i{
-  position: relative;
-  float: left;
-  width: 20px;
-  top: 2px;
+.map {
+  background-color: grey;
+  flex: 2;
+  height: 100vh;
 }
 
-.email-login,.email-signup{
-  position:relative;
-  float: left;
-  width: 100%;
-  height:auto;
-  margin-top: 20px;
-  text-align:center;
-}
-.u-form-group{
-  width:100%;
-  margin-bottom: 10px;
-}
-.u-form-group input[type="text"],
-.u-form-group input[type="password"]{
-  width: calc(50% - 22px);
-  height:45px;
-  outline: none;
-  border: 1px solid #ddd;
-  padding: 0 10px;
-  border-radius: 2px;
-  color: #333;
-  font-size:0.8rem;
-  -webkit-transition:all 0.1s linear;
-  -moz-transition:all 0.1s linear;
-  transition:all 0.1s linear;
-}
-.u-form-group input:focus{
-  border-color: #358efb;
-}
-.u-form-group button{
-  width:50%;
-  background-color: #1CB94E;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 14px 0;
-  border-radius: 2px;
-  text-transform: uppercase;
-}
-.register{
-  width:50%;
-  text-align: left;
-  text-decoration: underline;
-  color: #888;
-  font-size: 1rem;
+.activities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 3;
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 1%;
 }
 
-/*API search related styling*/
-  #map {
-    width: 400px;
-    height: 400px;
-  }
+    .activity {
+      width: 46%;
+      display: flex;
+      flex-direction: column;
+      margin: 2%;
+    }
 
-  .location-search {
-    width: 400px;
-  }
+        .title {
+          margin: 2%;
+          font-family: 'Lobster', cursive;
+        }
+
+        .user-info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 2%;
+          font-family: 'Roboto Condensed', sans-serif;
+        }
+
+            .user-pic {
+              border-radius: 50%;
+              width: 25%;
+              height: 25%;
+              max-width: 100px;
+              max-height: 100px;
+            }
+
+        .activity-info {
+          margin: 2%;
+          font-family: 'Roboto Condensed', sans-serif;
+        }
+
+            .activity-info-content {
+              margin-top: 10%;
+            }

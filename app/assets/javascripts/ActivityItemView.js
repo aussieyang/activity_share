@@ -1,5 +1,6 @@
 var ActivityItemView = Backbone.View.extend({
 
+  className: "activity",
   render: function() {
     var template = $('#activity-template').html();
 
@@ -9,5 +10,3 @@ var ActivityItemView = Backbone.View.extend({
     }
 
 });
-
-

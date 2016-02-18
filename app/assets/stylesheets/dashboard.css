@@ -1,6 +1,7 @@
 /*Dashboard*/
 .dash-container {
   display: flex;
+  margin-top: 85px;
 }
 .left-menu {
   padding: 10px;
