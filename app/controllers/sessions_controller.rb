@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
       # Means our user is signed in. Add the authorization to the user
       User.find(session[:user_id]).add_provider(auth_hash)
 
-      redirect_to '/'
+      redirect_to '/activities'
     else
       # Log him in or sign him up
       auth = Authorization.find_or_create(auth_hash)
@@ -36,13 +36,13 @@ class SessionsController < ApplicationController
       # Create the session
       session[:user_id] = auth.user.id
 
-      redirect_to '/'
+      redirect_to '/activities'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to '/'
+    redirect_to '/activities'
   end
 
   def failure
