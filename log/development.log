@@ -7502,3 +7502,643 @@ Processing by Admin::ActivitiesController#new as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
   [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
 Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-02-19 11:50:43 +1100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered pages/home.html.erb within layouts/splash (1806.5ms)
+Completed 200 OK in 1968ms (Views: 1928.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/activities?authenticity_token=cjblk0oLYbfpu6zhCgmKuAQbI7yXpF0BKDGUlORniyat1%2FOp7UJAR9W%2FtjWVRfw4qJYsupn84dvqGYLslqhf4g%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 11:50:56 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"cjblk0oLYbfpu6zhCgmKuAQbI7yXpF0BKDGUlORniyat1/Op7UJAR9W/tjWVRfw4qJYsupn84dvqGYLslqhf4g==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[36mActivity Load (4.1ms)[0m  [1mSELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (31.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 495ms (Views: 204.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 11:50:57 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 11:50:57 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 11:50:57 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 11:50:57 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 11:50:57 +1100
+
+
+Started GET "/activities" for ::1 at 2016-02-19 11:51:18 +1100
+Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.4ms)[0m  SELECT "activities".* FROM "activities"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (17.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 11:51:18 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 11:51:18 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 11:51:18 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 11:51:18 +1100
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 11:51:18 +1100
+
+
+Started GET "/activities" for ::1 at 2016-02-19 11:59:33 +1100
+Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.4ms)[0m  SELECT "activities".* FROM "activities"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (10.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/front.self-4e1701a51d98890c023a3ab8e0b9f6f54e0e7307f1aef9750952a40c6f90bf20.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/reset.self-c3415552adcad748b26d1aa54cf030891e278b83d028e0f1ad472d3796ad9291.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/list.self-2917eebd66d689e89a0b85f3b54e8fd9d39376813f6047accd15b966f146fdeb.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/style.self-e2a638b8f4203ac885d0fdb7e4d20a751ecf869d946c780791bfd45ef04f4026.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/layout.self-18d0945ad06d677914831d6767102b747e907231d011ee9a5b1c2a105b31587d.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/user-show.self-daa3bce85243cd55466f7c7f1194a538e26d58f5859727dd20bc501111c6f546.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/show.self-1af61fa8fbc6066f7d328146e5d23ea29459368f63f14a7f124e5412e388d24d.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/login.self-79a392329f49f8ec23a11cc7739cafe45eca3b2059074b31617bda19ed62056e.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/user-create.self-fa12ed3e7c68e33bd8241bb7b1246626f64e29c6f01ef62591be9aa158d39ed6.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/activity-create.self-e1121b8b50e84d9b6e13be0ebf96639bcc12aefd97314bb9c6549200812309a2.css?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/app.self-85a46793f4a6a3ae43b35efbed92eb95bfe7f8ed390f3626afca6aecc0c4a043.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/ratyrate.self-b9262c04d0d8852b84fc29d4c3a7111e055b19f14c93d21421469c77032a601c.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/front.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/assets/Logo-d76c0d6654809da6cf98c7a2c7586c0e3440fa6d8a4560dba8898959df2cbcb5.png" for ::1 at 2016-02-19 11:59:33 +1100
+
+
+Started GET "/activities" for ::1 at 2016-02-19 12:04:32 +1100
+Processing by ActivitiesController#index as HTML
+  [1m[35mActivity Load (0.4ms)[0m  SELECT "activities".* FROM "activities"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (11.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 193ms (Views: 190.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/app.self-8352d5e20443856005adac68b970126ec5c854ccd34513ef8077a5de80a75740.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/style.self-e2a638b8f4203ac885d0fdb7e4d20a751ecf869d946c780791bfd45ef04f4026.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/list.self-2917eebd66d689e89a0b85f3b54e8fd9d39376813f6047accd15b966f146fdeb.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/front.self-4e1701a51d98890c023a3ab8e0b9f6f54e0e7307f1aef9750952a40c6f90bf20.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/login.self-79a392329f49f8ec23a11cc7739cafe45eca3b2059074b31617bda19ed62056e.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/reset.self-c3415552adcad748b26d1aa54cf030891e278b83d028e0f1ad472d3796ad9291.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/show.self-1af61fa8fbc6066f7d328146e5d23ea29459368f63f14a7f124e5412e388d24d.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/layout.self-18d0945ad06d677914831d6767102b747e907231d011ee9a5b1c2a105b31587d.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/user-show.self-daa3bce85243cd55466f7c7f1194a538e26d58f5859727dd20bc501111c6f546.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/user-create.self-fa12ed3e7c68e33bd8241bb7b1246626f64e29c6f01ef62591be9aa158d39ed6.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/activity-create.self-e1121b8b50e84d9b6e13be0ebf96639bcc12aefd97314bb9c6549200812309a2.css?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/ratyrate.self-b9262c04d0d8852b84fc29d4c3a7111e055b19f14c93d21421469c77032a601c.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/front.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/assets/Logo-d76c0d6654809da6cf98c7a2c7586c0e3440fa6d8a4560dba8898959df2cbcb5.png" for ::1 at 2016-02-19 12:04:32 +1100
+
+
+Started GET "/" for ::1 at 2016-02-19 12:04:40 +1100
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered pages/home.html.erb within layouts/splash (2.2ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-02-19 12:06:03 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/home.html.erb within layouts/splash (2.2ms)
+Completed 200 OK in 158ms (Views: 156.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/hover.self-f258432210e8579ef73aff5b03e93ca7ee945835340204dac238c80b1d320293.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/splash.self-0a807aadb90c36c5be939829f2b5b9c57dedf5c57d87f73438fb91bc11920309.css?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/reset.self-c3415552adcad748b26d1aa54cf030891e278b83d028e0f1ad472d3796ad9291.css?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/style.self-e2a638b8f4203ac885d0fdb7e4d20a751ecf869d946c780791bfd45ef04f4026.css?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/splash-style.self-3443a69038b8c1a480fa12604266ea943054e720d19564e09cb73973899cb963.css?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/login.self-79a392329f49f8ec23a11cc7739cafe45eca3b2059074b31617bda19ed62056e.css?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/splash.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/assets/Logo-d76c0d6654809da6cf98c7a2c7586c0e3440fa6d8a4560dba8898959df2cbcb5.png" for ::1 at 2016-02-19 12:06:03 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:18 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[35mActivity Load (1.7ms)[0m  SELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (4.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 893ms (Views: 272.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/assets/app.self-3343bcc8972a3712a1fd79a26861e786f9a85b5a7ddc4c3cf7399f95cedc60c3.js?body=1" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:19 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:42 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[36mActivity Load (1.6ms)[0m  [1mSELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 372ms (Views: 180.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/front.self-4e1701a51d98890c023a3ab8e0b9f6f54e0e7307f1aef9750952a40c6f90bf20.css?body=1" for ::1 at 2016-02-19 12:06:42 +1100
+
+
+Started GET "/assets/reset.self-c3415552adcad748b26d1aa54cf030891e278b83d028e0f1ad472d3796ad9291.css?body=1" for ::1 at 2016-02-19 12:06:42 +1100
+
+
+Started GET "/assets/list.self-2917eebd66d689e89a0b85f3b54e8fd9d39376813f6047accd15b966f146fdeb.css?body=1" for ::1 at 2016-02-19 12:06:42 +1100
+
+
+Started GET "/assets/layout.self-18d0945ad06d677914831d6767102b747e907231d011ee9a5b1c2a105b31587d.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/style.self-e2a638b8f4203ac885d0fdb7e4d20a751ecf869d946c780791bfd45ef04f4026.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/login.self-79a392329f49f8ec23a11cc7739cafe45eca3b2059074b31617bda19ed62056e.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/show.self-1af61fa8fbc6066f7d328146e5d23ea29459368f63f14a7f124e5412e388d24d.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/user-show.self-daa3bce85243cd55466f7c7f1194a538e26d58f5859727dd20bc501111c6f546.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/user-create.self-fa12ed3e7c68e33bd8241bb7b1246626f64e29c6f01ef62591be9aa158d39ed6.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/activity-create.self-e1121b8b50e84d9b6e13be0ebf96639bcc12aefd97314bb9c6549200812309a2.css?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/app.self-3343bcc8972a3712a1fd79a26861e786f9a85b5a7ddc4c3cf7399f95cedc60c3.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/ratyrate.self-b9262c04d0d8852b84fc29d4c3a7111e055b19f14c93d21421469c77032a601c.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/hover.self-f258432210e8579ef73aff5b03e93ca7ee945835340204dac238c80b1d320293.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/front.self-10ad0916cf31256fe71785e8dc9cc297a96b1cdf7b74aeb61711199b9a3d003f.js?body=1" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/assets/Logo-d76c0d6654809da6cf98c7a2c7586c0e3440fa6d8a4560dba8898959df2cbcb5.png" for ::1 at 2016-02-19 12:06:43 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:50 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[35mActivity Load (1.6ms)[0m  SELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (4.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 262ms (Views: 38.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:50 +1100
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:50 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:50 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:50 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:50 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:51 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[36mActivity Load (1.5ms)[0m  [1mSELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (3.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 259ms (Views: 68.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:51 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[35mActivity Load (2.2ms)[0m  SELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (6.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 242ms (Views: 43.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:51 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[36mActivity Load (1.6ms)[0m  [1mSELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 249ms (Views: 43.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:52 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:52 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:52 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:52 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:52 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:06:52 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[35mActivity Load (4.0ms)[0m  SELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (8.5ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 252ms (Views: 56.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:53 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:53 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:53 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:53 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:53 +1100
+
+
+Started GET "/logout" for ::1 at 2016-02-19 12:06:59 +1100
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/activities" for ::1 at 2016-02-19 12:06:59 +1100
+Processing by ActivitiesController#index as HTML
+  [1m[36mActivity Load (0.5ms)[0m  [1mSELECT "activities".* FROM "activities"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (11.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:06:59 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:06:59 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:06:59 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:06:59 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:06:59 +1100
+
+
+Started GET "/activities?authenticity_token=UpQ9RIidUpZoZ0D%2BdfJ1fdIT%2FT%2BxKZCYMmDW%2FGEUq7SNdSt%2BL9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t%2FcA%3D%3D&location=Camberwell%2C+Victoria%2C+Australia" for ::1 at 2016-02-19 12:07:30 +1100
+Processing by ActivitiesController#index as HTML
+  Parameters: {"authenticity_token"=>"UpQ9RIidUpZoZ0D+dfJ1fdIT/T+xKZCYMmDW/GEUq7SNdSt+L9RzZlRjWirqvgP9fp7yOb9xLELwSMCEE9t/cA==", "location"=>"Camberwell, Victoria, Australia"}
+  [1m[36mActivity Load (1.7ms)[0m  [1mSELECT activities.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((activities.longitude - 145.0693626) / 57.2957795), ((activities.latitude - -37.8425667) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "activities" WHERE (activities.latitude BETWEEN -38.27676204933254 AND -37.40837135066746 AND activities.longitude BETWEEN 144.51953905574945 AND 145.61918614425056 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-37.8425667 - activities.latitude) * PI() / 180 / 2), 2) + COS(-37.8425667 * PI() / 180) * COS(activities.latitude * PI() / 180) * POWER(SIN((145.0693626 - activities.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 30)  ORDER BY distance ASC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered activities/index.html.erb within layouts/frontend (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 975ms (Views: 36.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/IndexView.js" for ::1 at 2016-02-19 12:07:31 +1100
+
+
+Started GET "/assets/ActivityItemView.js" for ::1 at 2016-02-19 12:07:31 +1100
+
+
+Started GET "/assets/Activity_model.js" for ::1 at 2016-02-19 12:07:31 +1100
+
+
+Started GET "/assets/Activities_collection.js" for ::1 at 2016-02-19 12:07:31 +1100
+
+
+Started GET "/assets/activity.js" for ::1 at 2016-02-19 12:07:31 +1100
+
+
+Started GET "/" for ::1 at 2016-02-19 12:07:36 +1100
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-02-19 12:07:36 +1100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/splash (1.6ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-19 12:08:43 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-02-19 12:08:43 +1100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/splash (1.0ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-19 12:08:46 +1100
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2016-02-19 12:08:46 +1100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/splash (1.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-19 12:08:51 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-02-19 12:08:51 +1100
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/splash (1.0ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)

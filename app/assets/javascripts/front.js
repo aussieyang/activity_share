@@ -17,5 +17,4 @@
 //= require app
 //= require jquery.raty
 //= require ratyrate
-
-
+//= require hover
