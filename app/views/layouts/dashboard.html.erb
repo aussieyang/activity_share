@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>ActivityShare Dashboard</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -13,45 +14,50 @@
 
 
 </head>
+
 <body>
-
   <div class="nav-bar">
-    <div class="logged-info">
-      <% if logged_in? %>
-      <% user = current_user %>
-        <a href="/admin/dashboard"><img src="http://placehold.it/100x100" alt=""></a>
-        <h3><%= user.name %></h3>
-      <% else %>
-        <h3><a href="/login">Login</a></h3>
-        <h3><a href="/admin/users/new">Signup</a></h3>
-      <% end %>
-    </div>
-      <a href="/"><img src="http://placehold.it/100x100" alt=""></a>
-    <div class="search-bar">
-      <form action="/activities">
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input type="text" placeholder="Search" name="location" id="place-input">
-        <button>&#128269;</button>
-      </form>
 
+  <% if logged_in?  %>
+    <div class="logged-info">
+      <img src="<%= current_user.avatar %>" alt="">
+      <h3>Hello, <%= current_user.name %> <a href="/logout">[Logout]</a></h3>
     </div>
+  <% else %>
+    <div class="not-logged">
+    <form action="/login">
+      <button>Log In</button>
+    </form>
+    <form action="/sign_up">
+      <button>Sign Up</button>
+    </form>
+    </div>
+  <% end %>
+
+    <%= image_tag "Logo.png", :class => "logo grow" %>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Activity">
+      <button>&#128269;</button>
+    </div>
+
   </div>
 
 
 <div class="dash-container">
   <div class="left-menu">
+    <img src="http://placehold.it/100x100" alt="">
     <div class="info-content">
-      <img src="http://placehold.it/100x100" alt="">
-      <p> <%= user.name %></p>
-      <p> <%= user.email %> </p>
-      <p> <%= user.location %> </p>
+      <p> Name: <%= current_user.name %></p>
+      <p> Email: <%= current_user.email %> </p>
+      <p> Location: <%= current_user.location %> </p>
     </div>
     <nav class="dashboard-nav">
       <ul>
         <li><%= link_to 'Edit Profile', edit_admin_user_path(current_user.id) %></li>
-        <li><%= link_to 'Host an activity', new_admin_activity_path %></li>
-        <li><%= link_to 'My hosted activities', admin_hosting_path(current_user) %></li>
-        <li><%= link_to 'Activites I am interested in', admin_booked_path(current_user) %></li>
+        <li><%= link_to 'Host New Activity', new_admin_activity_path %></li>
+        <li><%= link_to 'Hosted Activities', admin_hosting_path(current_user) %></li>
+        <li><%= link_to 'Interesting Activities', admin_booked_path(current_user) %></li>
       </ul>
     </nav>
     <form action="/logout" class="dash-logout">
