@@ -18,19 +18,23 @@
 
   <div class="nav-bar">
 
+  <% if logged_in?  %>
     <div class="logged-info">
-
-      <% if logged_in? %>
-      <% user = current_user %>
-        <a href="/admin/dashboard"><img src="http://placehold.it/100x100" alt=""></a>
-        <h3><%= user.name %></h3>
-      <% else %>
-        <h3><a href="/login">Login</a></h3>
-        <h3><a href="/admin/users/new">Signup</a></h3>
-      <% end %>
+      <img src="<%= current_user.avatar %>" alt="">
+      <h3>Hello, <%= current_user.name %> <a href="/logout">[Logout]</a></h3>
     </div>
+  <% else %>
+    <div class="not-logged">
+    <form action="/login">
+      <button>Log In</button>
+    </form>
+    <form action="/sign_up">
+      <button>Sign Up</button>
+    </form>
+    </div>
+  <% end %>
 
-    <a href="/"><img src="http://placehold.it/100x100" alt=""></a>
+    <%= image_tag "Logo.png", :class => "logo grow" %>
 
     <div class="search-bar">
       <input type="text" placeholder="Activity">

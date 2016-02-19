@@ -12,6 +12,7 @@
  *
  *= require_self
  *= require reset
+ *= require dashboard
  *= require login
  *= require style
  *= require layout

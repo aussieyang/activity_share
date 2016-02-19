@@ -6,15 +6,41 @@
 }
 .left-menu {
   padding: 10px;
-  background-color: maroon;
+  background-color: rgba(80, 150, 175, 0.5);
   flex: 1;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .left-menu img {
-  text-align: center;
+  width: 40%;
+  border-radius: 50%;
+  margin: 15%;
 }
-.dash-logout {
-  
+.left-menu p {
+  font-size: 1.6vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dashboard-nav{
+  margin: 10%;
+}
+
+.dashboard-nav ul {
+  list-style-type: none;
+  font-size: 1.6vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.dash-logout button {
+  width: 100%;
+  font-size: 1.6vw;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: grey;
+  background-color: rgb(170, 217, 224);
+  opacity: 0.8;
+  margin-left: 5%;
 }
 .right-content {
   padding-left: 10px;
