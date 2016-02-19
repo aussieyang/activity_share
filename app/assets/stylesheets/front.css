@@ -12,7 +12,17 @@
  *
  *= require_self
  *= require reset
- *= require frontend
- *= require user
+ *= require style
+ *= require login
+ *= require layout
+ *= require list
+ *= require show
+ *= require user-show
+ *= require user-create
+ *= require activity-create
+
+
+
+
 
  */

@@ -11,11 +11,14 @@
  * file per style scope.
  *
  *= require_self
- *= require style
  *= require reset
- *= require dashboard
- *= require frontend
- *= require user
-
+ *= require login
+ *= require style
+ *= require layout
+ *= require list
+ *= require show
+ *= require user-show
+ *= require user-create
+ *= require activity-create
 
  */

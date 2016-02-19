@@ -12,6 +12,9 @@
  *
  *= require_self
  *= require reset
- *= require frontend
- 
+ *= require style
+ *= require login
+ *= require splash-style
+
+
 */
